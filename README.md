@@ -1,7 +1,7 @@
 
 ## License
 
-Powerhell is licensed under the GNU General Public License v3.0. See LICENSE for more information.
+Powerhell is licensed under the GNU General Public [LICENSE](https://github.com/vibebhavv/Chameleon/blob/main/LICENSE) v3.0. See LICENSE for more information.
 
 # Overview
 
