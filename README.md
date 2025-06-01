@@ -23,3 +23,4 @@ Powerhell is licensed under the GNU General Public [LICENSE](https://github.com/
 - different Obfuscation methods
 
 ## Screenshots
+![Image](https://github.com/user-attachments/assets/cf284cfe-fae4-498a-b031-2d35302a0016)
