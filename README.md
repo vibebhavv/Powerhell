@@ -13,7 +13,7 @@ Powerhell is licensed under the GNU General Public [LICENSE](https://github.com/
   git clone https://github.com/vibebhavv/Powerhell
   cd Powerhell
   pip3 install -r requirements.txt
-  python3 main.py
+  python3 main.py --help
 ```
     
 ## Features
