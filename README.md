@@ -18,7 +18,7 @@ Powerhell is licensed under the GNU General Public [LICENSE](https://github.com/
     
 ## Features
 
-- Interactive Listener (Not so stable)
+- Interactive Listener **(Not so stable)**
 - AV Bypass techniques
 - different Obfuscation methods
 
