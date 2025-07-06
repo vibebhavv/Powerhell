@@ -22,7 +22,7 @@ def main():
     parser.add_argument('-p', '--port', type=int, metavar='PORT', help='Port to listen on')
     parser.add_argument('-o', '--output', metavar='FILE', help='Output file for generated script')
     parser.add_argument('-obf', '--obfuscation', metavar='METHOD', default='none', help='Obfuscation method (none, base64, xor, random)')
-    parser.add_argument('-payload', '--payload', metavar='TYPE', default='reverseshell', help='Payload type (reverseshell, uacbypass)')
+    parser.add_argument('-payload', '--payload', metavar='TYPE', default='reverseshell', help='Payload type (reverseshell, shellcode)')
     parser.add_argument('-s', '--start-listener', action='store_true', help='Start the interactive listener')
 
     args = parser.parse_args()
@@ -37,8 +37,9 @@ def main():
         return
     if args.output:
         if args.payload.lower() == 'reverseshell':
-            if args.obfuscation == 'none':
-                with open('reverse_shell.ps1', 'r') as f:
+            host = args.listen if args.listen else '0.0.0.0'
+            port = args.port if args.port else 4444
+                with open('modules/payloads/rvs.txt', 'r') as f:
                     script = f.read()
                 with open(args.output, 'w') as f:
                     f.write(script)
@@ -48,8 +49,8 @@ def main():
                 print(f"[+] Obfuscated script written to {args.output} using {args.obfuscation}")
             else:
                 print(f"[-] Unknown obfuscation method: {args.obfuscation}")
-        elif args.payload.lower() == 'uacbypass':
-            print("[!] UAC bypass payload generation is not implemented yet.")
+        elif args.payload.lower() == 'shellcode':
+            print("[!] Shellcode generation is not implemented yet.")
         else:
             print(f"[-] Unknown payload type: {args.payload}")
         answer = input("Do you want to start the listener now? (y/N): ").strip().lower()
