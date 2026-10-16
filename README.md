@@ -1,10 +1,9 @@
-```
- ____                    __             ____
-/ __ \____ _      ___  _____/ /_  ___  / / /
-/ /_/ / __ \ | /| / / _ \/ ___/ __ \/ _ \/ / /
-/ ____/ /_/ / |/ |/ /  __/ /  / / / /  __/ / /
-/_/   \____/|__/|__/\___/_/  /_/ /_/\___/_/_/
-```
+
+## What is PowerHell?
+
+PowerHell is a Python-based PowerShell payload generator built for penetration testers and red teamers. It generates reverse shell payloads, obfuscates them through multiple encoding/encryption methods, and includes an interactive listener — all from one CLI.
+
+No GUI. No bloat. Just clean, fast payloads.
 
 **PowerShell payload generator, obfuscator, and AV bypass tool for red teamers.**
 
@@ -12,15 +11,6 @@
 ![License](https://img.shields.io/badge/License-GPL%20v3-green?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows-lightgrey?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
-
-
----
-
-## What is PowerHell?
-
-PowerHell is a Python-based PowerShell payload generator built for penetration testers and red teamers. It generates reverse shell payloads, obfuscates them through multiple encoding/encryption methods, and includes an interactive listener — all from one CLI.
-
-No GUI. No bloat. Just clean, fast payloads.
 
 ---
 
