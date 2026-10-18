@@ -22,7 +22,6 @@ No GUI. No bloat. Just clean, fast payloads.
 | Random string obfuscation | ✅ |
 | No obfuscation (raw) | ✅ |
 | Interactive listener with autocomplete | ✅ *(experimental)* |
-| Shellcode payload generation | 🔜 *(planned)* |
 
 ---
 
@@ -50,7 +49,7 @@ python3 main.py [-h] [-l HOST] [-p PORT] [-o FILE] [-obf METHOD] [-payload TYPE]
 | `-p`, `--port` | Port number | `4444` |
 | `-o`, `--output` | Output file path for generated payload | — |
 | `-obf`, `--obfuscation` | Obfuscation method: `none`, `base64`, `xor`, `random` | `none` |
-| `-payload`, `--payload` | Payload type: `reverseshell`, `shellcode` | `reverseshell` |
+| `-payload`, `--payload` | Payload type: `reverseshell` | `reverseshell` |
 | `-s`, `--start-listener` | Start the interactive listener immediately | — |
 
 ---
